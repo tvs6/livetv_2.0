@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live TV | Sports</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Live TV</h1>
+        <p>
+            Watch Live TV and Sports Channels for FREE.
+        </p>
+    </div>
+    
+    <div class="container">
+        <!-- Iframe Container -->
+        <div class="iframe-container">
+            <iframe id="match-iframe" src="https://bdixtv247.techpriyo.com/tpl/playid.php?id=CRIC_BUZZ" scrolling="no" allow="accelerometer;autoplay;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+        </div>
+
+        <!-- Iframe Source Links -->
+        <div class="link-container">
+
+           <div class="card" onclick="changeIframeSource('https://bdiptv24.com/BDIX/tsports.php')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnh8Bws7L1vyknKEHj9bs_Ckf1V9JbIiU8FQ&s" alt="" class="ch-img">
+           </div>
+
+            <div class="card" onclick="changeIframeSource('https://tvs6.github.io/sports_2.0/gtv.html')">
+                 <img src="https://upload.wikimedia.org/wikipedia/en/2/20/GTVBangladeshLogo.png" alt="" class="ch-img">
+            </div>
+
+            <div class="card" onclick="changeIframeSource('asports.html')">
+                <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/A_Sports_Logo.png" alt="" class="ch-img">
+            </div>
+
+            <div class="card" onclick="changeIframeSource('ten-sports.html')">
+                <img src="https://www.adgully.com/img/800/66127_ten-sports-logo.PNG.jpg" alt="" class="ch-img">
+            </div>
+
+            <div class="card" onclick="changeIframeSource('astro.html')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Astro_Cricket.png" alt="" class="ch-img">
+            </div>
+
+        </div>
+
+        
+    <script>
+        // Function to change the iframe source
+        function changeIframeSource(url) {
+            document.getElementById('match-iframe').src = url;
+        }
+
+        // Current time display
+        function updateCurrentTime() {
+            const now = new Date();
+            const currentTime = now.toLocaleTimeString();
+            document.getElementById('current-time').textContent = `Current Time: ${currentTime}`;
+        }
+        setInterval(updateCurrentTime, 1000);
+    </script>
+        
+</body>
+</html>
