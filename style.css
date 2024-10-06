@@ -87,12 +87,11 @@ p{
 }
 
 .card{
-    width: 150px;
+    width: 148px;
     height: 80px;
     border-radius: 10px;
     display: inline-block;
-    margin-top: 16px;
-    margin-right: 6px;
+    
     background-color: white;
     transition: 0.2s;
 }
@@ -103,7 +102,7 @@ p{
 .card img{
     width: 100%;
     height: 100%;
-    
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .ch-img{
@@ -112,6 +111,21 @@ p{
     cursor: pointer;
 }
 
+.link-container{
+    margin-top: 10px;
+    background-color: gray;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
 
 
 /* Media Queries */
@@ -155,11 +169,19 @@ p{
     
 }
 
+.link-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .card{
-    width: 100px;
+    width: 108px;
     height: 55px;
     border-radius: 10px;
-    margin-right: 10px;
+    
 }
 
 .card img{
